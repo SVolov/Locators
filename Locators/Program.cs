@@ -2,27 +2,20 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
-WebDriver driver = new ChromeDriver();
-By searchLocator = By.Name("q"); //https://www.bbc.co.uk/search?d=SEARCH_PS
+
+By searchLocator = By.ClassName("ssrcss-15a3kwz-GlobalNavigationItem"); 
+
+By sportLocator = By.ClassName("ssrcss-1vyfvn-LogoLink");
+
+By moreMenuLocator = By.Id("more-menu-button");
+
+By iframeLocator = By.Name("__uspapiLocator");
 
 
-driver.Url = "https://www.bbc.com/sport";
-driver.Navigate();
-//IWebElement searchEl = driver.FindElement(searchLocator);
-//searchEl.SendKeys("Arsenal");
+By searchLocatorXPath = By.XPath("//div[@role = 'search']");
 
-//By sportLocator = By.ClassName("ssrcss-9ow4nk-LogoIcon");
-//IWebElement sportEl = driver.FindElement(sportLocator);
-//sportEl.Click();
+By sportLocatorXPath = By.XPath("//a[@href ='/sport' and @class = 'ssrcss-1vyfvn-LogoLink esbu9dd4']"); 
 
-//By bBCLocator = By.ClassName("ssrcss-jqeoyw-BBCBlocks");
-//IWebElement bBCEl = driver.FindElement(bBCLocator);
-//bBCEl.Click();
+By moreMenuLocatorXPath = By.XPath("//*[@id = 'more-menu-button']");
 
-//IWebElement sportLocator = driver.FindElement(By.XPath("//a[@href ='/sport' and @class = 'ssrcss-1vyfvn-LogoLink esbu9dd4']")); 
-//sportLocator.Click();
-
-//IWebElement searchEl = driver.FindElement(By.XPath("//div[@role = 'search']"));
-
-IWebElement bBCEl = driver.FindElement(By.XPath("//a[@id ='homepage-link']"));
-bBCEl.Click();
+By iframeLocatorXPath = By.XPath("//iframe[@name = '__uspapiLocator']");
